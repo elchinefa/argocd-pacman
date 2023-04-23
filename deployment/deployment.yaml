@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pacman-ui
+spec:
+  replicas: 1
+  revisionHistoryLimit: 3
+  selector:
+    matchLabels:
+      app:  pacman-ui
+  template:
+    metadata:
+      labels:
+        app:  pacman-ui
+    spec:
+      containers:
+      - image:  aelchin/pacman:1.0
+        name: pacman-ui
+        ports:
+        - containerPort: 80
