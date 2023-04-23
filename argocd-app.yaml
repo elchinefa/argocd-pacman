@@ -1,0 +1,17 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: game
+  namespace: argocd
+spec:
+  destination:
+    namespace: game
+    server: "https://kubernetes.default.svc"
+  project: default
+  source:
+    path: deployment
+    repoURL: "https://github.com/elchinefa/argocd-pacman.git"
+    targetRevision: main
+  syncPolicy:
+    syncOptions:
+      - CreateNamespace=true
