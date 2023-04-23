@@ -3,16 +3,15 @@ kind: Service
 metadata:
   name: pacman-ui
 spec:
+  externalIPs:
+  - 192.168.0.86
   ports:
   - nodePort: 31955
-  protocol: TCP
-      targetPort: 8080
-    selector:
-      app: pacman-ui
-  - port: 8080
-    targetPort: 8000
+    port: 8080
+    protocol: TCP
   selector:
-    app: pacman-ui
-    externalIPs:
-    - 192.168.0.86
+     app: pacman-ui
+   
+    
+  
     
