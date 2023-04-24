@@ -6,5 +6,7 @@ spec:
   ports:
   - port: 8080
     targetPort: 8000
+    nodePort: 30008
   selector:
     app: pacman-ui
+  type: NodePort
