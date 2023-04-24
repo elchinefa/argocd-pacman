@@ -1,7 +1,6 @@
 # argocd-pacman
 
-After deploying it should edit service:
-kubectl patch svc pacman -n game-manual -p '{"spec": {"type": "LoadBalancer"}}'
+> After deploying it, get service  and open the game in browser.
 
 
-kubectl edit  svc pacman -n game-manual
+
