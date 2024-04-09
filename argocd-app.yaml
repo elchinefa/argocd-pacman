@@ -2,7 +2,7 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: game
-  namespace: argocd
+  namespace: openshift-gitops-operator # argocd
 spec:
   destination:
     namespace: game
