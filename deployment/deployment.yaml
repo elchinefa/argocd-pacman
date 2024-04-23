@@ -4,6 +4,8 @@ metadata:
   name: pacman-ui
   namespace: openshift-gitops-operator
 spec:
+  securityContext:
+    runAsNonRoot: false
   replicas: 1
   revisionHistoryLimit: 3
   selector:
@@ -19,3 +21,5 @@ spec:
         name: pacman-ui
         ports:
         - containerPort: 80
+        securityContext:
+          allowPrivilegeEscalation: true
