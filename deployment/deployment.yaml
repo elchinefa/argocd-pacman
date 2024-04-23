@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pacman-ui
-  namespace: openshift-gitops-operator
+
 spec:
   securityContext:
     runAsNonRoot: false
